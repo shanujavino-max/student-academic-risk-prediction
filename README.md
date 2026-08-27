@@ -99,7 +99,7 @@ confirmed). Check your Colab preprocessing cell and update
 3. In the app's **Settings → Secrets**, paste:
    ```toml
    ADMIN_USERNAME = "admin"
-   ADMIN_PASSWORD = "a-real-password-here"
+   ADMIN_PASSWORD = "ChangMe123!"
    ```
 4. Deploy. First load creates `database/student_risk.db` and seeds the
    admin account from those secrets automatically.
