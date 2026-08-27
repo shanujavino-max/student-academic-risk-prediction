@@ -1,0 +1,13 @@
+# Student Academic Risk Prediction System - core dependencies
+# More packages will be appended here as later development stages need them
+# (e.g. bcrypt for password hashing in the Authentication stage, shap for
+# optional local explainability). Nothing here is ever silently removed --
+# only appended, so earlier stages stay reproducible.
+
+streamlit>=1.32.0
+pandas>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.3.0
+joblib>=1.3.0
+plotly>=5.18.0
+bcrypt>=4.1.0

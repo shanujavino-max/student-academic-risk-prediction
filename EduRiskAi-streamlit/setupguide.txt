@@ -1,0 +1,273 @@
+============================================================
+     STUDENT ACADEMIC RISK PREDICTION SYSTEM
+              QUICK WINDOWS SETUP GUIDE
+============================================================
+
+REQUIREMENTS
+------------
+- Windows 10/11
+- VS Code
+- Python 3.12 recommended
+- Project folder
+
+
+============================================================
+1. INSTALL PYTHON
+============================================================
+
+Download Python from:
+
+https://www.python.org/downloads/windows/
+
+IMPORTANT:
+During installation select:
+
+[✓] Add Python to PATH
+
+Then install Python.
+
+
+============================================================
+2. OPEN PROJECT IN VS CODE
+============================================================
+
+Open VS Code.
+
+Go to:
+
+File -> Open Folder
+
+Select:
+
+student-risk-streamlit
+
+
+Then open:
+
+Terminal -> New Terminal
+
+
+============================================================
+3. CREATE VIRTUAL ENVIRONMENT
+============================================================
+
+Run:
+
+python -m venv .venv
+
+
+If "python" does not work:
+
+py -m venv .venv
+
+
+============================================================
+4. ACTIVATE VIRTUAL ENVIRONMENT
+============================================================
+
+PowerShell:
+
+.\.venv\Scripts\Activate.ps1
+
+
+If PowerShell blocks the command, run:
+
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+
+Then run again:
+
+.\.venv\Scripts\Activate.ps1
+
+
+You should now see:
+
+(.venv)
+
+
+============================================================
+5. INSTALL DEPENDENCIES
+============================================================
+
+Run:
+
+python -m pip install --upgrade pip
+
+Then:
+
+python -m pip install -r requirements.txt
+
+
+Wait until installation finishes.
+
+
+============================================================
+6. CHECK MODEL FILES
+============================================================
+
+Make sure the model folder contains:
+
+model\
+    student_risk_model.pkl
+    student_risk_features.pkl
+    student_risk_metadata.pkl
+
+
+The two most important files are:
+
+student_risk_model.pkl
+student_risk_features.pkl
+
+
+============================================================
+7. START APPLICATION
+============================================================
+
+Run:
+
+python -m streamlit run app.py
+
+
+Streamlit should display:
+
+Local URL: http://localhost:8501
+
+
+Open the URL in your browser.
+
+
+============================================================
+8. QUICK TEST
+============================================================
+
+Check that:
+
+[ ] Login works
+[ ] Dashboard opens
+[ ] Student Prediction works
+[ ] Risk probability displays
+[ ] Prediction History works
+[ ] Analytics works
+
+
+============================================================
+NORMAL STARTUP AFTER FIRST INSTALLATION
+============================================================
+
+You DO NOT need to install everything again.
+
+Every time you want to run the project:
+
+1. Open project in VS Code
+
+2. Open Terminal
+
+3. Activate environment:
+
+.\.venv\Scripts\Activate.ps1
+
+4. Start application:
+
+python -m streamlit run app.py
+
+
+============================================================
+COMMON ERRORS
+============================================================
+
+ERROR:
+No module named 'bcrypt'
+
+FIX:
+
+python -m pip install bcrypt
+
+
+------------------------------------------------------------
+
+ERROR:
+No module named 'streamlit'
+
+FIX:
+
+python -m pip install -r requirements.txt
+
+
+------------------------------------------------------------
+
+ERROR:
+EOFError when loading .pkl
+
+FIX:
+
+Check that:
+
+model\student_risk_model.pkl
+
+is not empty or corrupted.
+
+Replace it with the original model exported from Google Colab.
+
+
+------------------------------------------------------------
+
+ERROR:
+scikit-learn model version warning
+
+CHECK VERSION:
+
+python -c "import sklearn; print(sklearn.__version__)"
+
+Install the same scikit-learn version used in Google Colab.
+
+
+============================================================
+IMPORTANT
+============================================================
+
+You DO NOT need:
+
+- XAMPP
+- Apache
+- PHP
+- MySQL
+
+Streamlit runs the web application directly.
+
+
+============================================================
+QUICK COMMANDS
+============================================================
+
+FIRST TIME SETUP:
+
+python -m venv .venv
+
+.\.venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+
+python -m pip install -r requirements.txt
+
+python -m streamlit run app.py
+
+
+NORMAL DAILY START:
+
+.\.venv\Scripts\Activate.ps1
+
+python -m streamlit run app.py
+
+
+STOP SERVER:
+
+Ctrl + C
+
+
+============================================================
+                    SETUP COMPLETE
+============================================================
+
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
